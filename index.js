@@ -9,14 +9,14 @@ const copyToClipboard = () => {
 fileInput.addEventListener('change', (evt) => {
   const file = fileInput.files[0];
   const reader = new FileReader();
-  results.querySelector('#results > button').addEventListener('click', copyToClipboard);
+  results.querySelector('#results > button').removeEventListener('click', copyToClipboard);
 
   reader.addEventListener('load', () => {
     // Base64 Data URL
     const resultsText = document.getElementById('data-url');
     dataUrl = reader.result;
     resultsText.innerHTML = dataUrl;
-    const results = document.getElementById('results')
+    const results = document.getElementById('results');
     results.querySelector('img').src = dataUrl;
     document.querySelector('#copied').classList.add('hidden');
     results.querySelector('button').addEventListener('click', copyToClipboard);
