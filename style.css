@@ -774,7 +774,6 @@ html,body {
   color: var(--text);
   text-align: center;
   margin: .625rem;
-  height: 50%;
 }
 
 .hero-title {
@@ -832,4 +831,11 @@ html,body {
   margin: .5rem 0;
   overflow-wrap: unset;
   text-align: start;
+}
+
+.links {
+  margin: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
